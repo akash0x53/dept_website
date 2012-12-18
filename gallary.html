@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="jqry.js" type="text/javascript">
+</script>
+
+<!--<link href="style.css" type="text/css" rel="stylesheet" />-->
+
+<link href="jqry_ui_css.css"  rel="stylesheet" type="text/css" />
+
+<script src="jqry_ui.js" type="text/javascript">
+</script>
+
+<style type="text/css">
+ul
+{
+	list-style:none;
+	
+}
+body
+{
+	display:inline-block;
+}
+#slideshow
+{
+	width:482px;
+	margin:auto;
+	text-align:justify;
+	border:solid 1px black;
+	
+}
+</style>
+
+<script type="text/javascript" >
+$(document).ready(function(e) {
+
+	$("#slideshow > div:gt(0)").hide();
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+    	.show("slow")
+	    .next()
+	   	.hide("slow")
+	    .end()
+	    .appendTo('#slideshow');},  
+	3000);
+	
+
+});
+</script>
+
+<title>Photo Gallary</title>
+</head>
+
+<body>
+
+<div id="slideshow">
+
+	<div style="padding-right:10px;">
+    	<label> Welcome To Computer Engineering Department</label>
+	<hr>
+	<label>
+    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor dui, consequat vel viverra et, sodales ut ante. Curabitur dui ipsum, sollicitudin ut varius vel, sagittis in sapien. Nulla eget auctor nulla. Etiam id ligula risus, eu suscipit eros. Quisque nibh libero, malesuada sit amet ullamcorper sed, mattis eget quam. In eget porta mi. Fusce risus lorem, pellentesque a pretium in, rutrum eu mi. Morbi tempor, mi a ullamcorper feugiat, velit leo accumsan ligula, at dapibus quam libero ac purus. In in arcu mi, eget rhoncus tortor. Maecenas semper magna vitae dui consectetur pulvinar. Nullam eget nibh erat, non eleifend ipsum. Mauris in lorem a est iaculis dignissim vel nec ante. Fusce euismod orci ac diam consectetur elementum. Quisque scelerisque velit nec est vulputate vulputate.
+    </div>
+   	<div>
+    	<img src="slides/2.jpg" />    
+    </div>
+   	<div>
+    	<img src="slides/3.jpg" />    
+    </div>
+</div>
+
+</body>
+</html>

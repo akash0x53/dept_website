@@ -1,0 +1,511 @@
+@charset "utf-8";
+/* 
+Author: Akash Shende (c) 2012
+CSS3,CSS2
+Webkit
+
+Color used: Firebrick 	cc3333
+			White		FFFFFF
+			Gray1		333333 (shadow)
+			Gray2		666666
+------------------------------------------------------------------
+*/
+
+
+/*Feedback button, form*/
+#feedback
+{
+	background-color:white;
+	position:fixed;
+	top:90%;
+	left:0px;
+	width:70px;
+	height:30px;
+	border:solid 1px #666666;
+
+	-webkit-border-top-right-radius:15px; /*Chorme*/
+	-webkit-border-bottom-right-radius:15px;
+	
+	-moz-border-radius-topright:15px; /*Mozzila*/
+	-moz-border-radius-bottomright:15px;
+	
+	
+	font-family:Orlad_sad;
+	font-size:14px;
+	cursor:pointer;
+
+}
+
+#feedback:hover
+{
+	background-color:black;
+	color:White;
+	
+}
+#feedback_form
+{
+display:none;
+/*left:40%;
+top:40%;*/
+font-family:"Comic Sans MS", cursive;	
+position:absolute;
+top:40%;
+left:40%;
+background-color:white;
+ box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+ border-radius:5px;
+ z-index:9999
+
+}
+
+/*Feedback section ends*/
+
+
+#date_pick
+{
+	position:relative;
+	left:100px;
+	top:200px;
+	width:250px;
+}
+
+
+/* MAIN container*/
+.main
+{
+	width:950px;
+	border:solid 1px #999999;
+	margin:auto;
+	height:790px;
+	box-sizing:border-box;
+	box-shadow:0px 4px 7px 1px rgba(102,102,102,0.5);
+	display:block;
+	background-color:white;
+	z-index:0;
+
+}
+body
+{
+	overflow:auto;
+}
+/* MAIN container style ends*/
+
+
+
+/* Navigation menus*/
+#menu
+{
+	margin-top:1.5em;
+	background-color:#cc3333;
+	height:56px;
+	box-shadow:0px 3px 6px 0px #666666;	
+	font-family:Orlad_sad;
+	font-size:36px;
+	color:#FFFFFF;
+	display:block;
+}
+
+#menu li
+{
+	list-style-type:none;	
+	float:left;
+	margin-bottom:0px;
+/*	padding-bottom:10px;*/
+	margin-left:0px;
+	padding-left:15px;
+	display:block;
+	margin-left:-15px;
+	
+}
+#menu ul
+{
+	margin-left:-10px;	
+	
+}
+.selected
+{
+	background-image:url('images/market_03.png');
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+#menu li a
+{
+	text-decoration:none;
+	color:#FFF;
+	margin-left:0.25em;
+	text-shadow:3px 4px 5px #000;
+	margin-bottom:0px;
+	size:auto;
+	margin-right:0.25em;
+
+}
+#menu li a:hover
+{
+	content:normal;
+/*	background-image:url('images/market_03.png');
+	background-repeat:no-repeat;
+	background-position:center top;*/
+	margin-bottom:0px;
+	background-origin:50px 50px;
+	height:13px;
+	width:15px;
+}
+/*Navigation menus styles ends*/
+
+/*styles for banner*/
+.ban
+{
+		width:850px;
+		margin:auto;
+}
+.ban img
+{
+	margin-top:-30em;
+}
+/*banner styles end*/
+
+
+/*Footer styles*/
+
+#footer
+{
+	position:absolute;
+	height:75px;
+	width:957px;
+	top:45.1em;
+	color:#999999;
+	display:inline-block;
+	margin:auto;
+/*	border:solid 1px black;*/
+}
+
+.foot_text
+{
+	font-family:Orlad_sad;
+	font-size:13px;
+	width:500px;
+	position:relative;
+	left:40px;
+	text-shadow:1px 2px 5px #999;
+		
+}
+
+#hits
+{
+	font-family:Orlad_sad;
+	font-size:24px;
+	size:auto;
+	position:relative;
+	top:-35px;
+	right:100px;
+	float:right;
+	text-shadow:1px 2px 5px #999;
+}
+/*Footer ends*/
+
+
+
+/* LOGIN,SIGNUP,LOGOUT buttons*/
+#login_signup
+{
+	font-family:Orlad_sad;
+	font-size:18px;
+	color:#666;
+	position:relative;
+ 	width:18%;
+	size:auto;
+	left:81.5%;
+	top:1%;
+}
+
+#login_signup label
+{
+	border:solid 1px #CCC;
+	padding-left:10px;
+	padding-right:10px;
+	-webkit-border-radius:10px;
+	border-bottom-right-radius:10px;
+	text-align:justify;
+	box-shadow:0px 3px 6px 0px #666666;	
+}
+#login_signup label:hover
+{
+	color:white;
+	background-color:#666;;
+	cursor:pointer;
+}
+#login_box
+{
+	position:relative;
+	top:0.5em;
+	font-family:Orlad_sad;
+	width:auto;
+	float:right;
+	box-shadow:0px 3px 6px 0px #666666;	
+	background-color:#cc3333;
+	color:white;
+	display:none;
+	z-index:9999;
+}
+
+#signup_box
+{
+	position:relative;
+	top:0.7em;
+	font-family:Orlad_sad;
+	background-color:#cc3333;
+	color:white;
+	width:27%;
+	float:right;
+/*	border:solid 1px black;*/
+	display:none;
+	box-shadow:0px 3px 6px 0px #666666;	
+	z-index:9999;
+}
+
+#logout
+{
+	font-family:Orlad_sad;
+	font-size:18px;
+	color:#666;
+	position:relative;
+ 	width:18%;
+	size:auto;
+	left:89%;
+	top:1%;
+}
+#logout label
+{
+	border:solid 1px #CCC;
+	padding-left:10px;
+	padding-right:10px;
+	-webkit-border-radius:10px;
+	border-bottom-right-radius:10px;
+	text-align:justify;
+	box-shadow:0px 3px 6px 0px #666666;	
+}
+#logout label:hover
+{
+	color:white;
+	background-color:#666;;
+	cursor:pointer;
+}
+
+/*LOGIN,SIGNUP,LOGOUT ends */
+
+
+/*recent updates section*/
+#updates
+{
+	position:relative;
+	width:95%;
+	left:5%;
+	height:100%;
+	box-shadow:1px 3px 6px 2px #666666;	
+	background-origin:padding-box;
+	padding-left:-10px;
+	z-index:2;
+	overflow:hidden;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#updates a
+{
+	text-decoration:none;
+	max-width:80%;
+}
+#updates a:hover
+{
+	text-decoration:underline;
+}
+#update_head
+{
+	font-family:Orlad_sad;
+	font-size:24px;
+	text-align:center;
+	background-color:#cc3333;
+	color:white;
+	position:relative;
+	width:11.1em;
+	top:16%;
+	left:71%;
+	height:auto;
+	text-shadow:3px 4px 5px #000;
+/*	border:solid 1px black;*/
+	z-index:10;
+	max-height:1.3em;
+}
+#update_container
+{
+	position:relative;
+	width:28%;
+	top:16%;
+	left:71%;
+	height:25%;
+	
+	background-image:url('images/ribbon_03.png');
+	background-repeat:no-repeat;
+	background-position:left top;
+/*	border:solid 1px black;*/
+	z-index:2;
+}
+
+/*Updates ends*/
+
+
+/*CSS slideshow */
+#slides
+{
+	height:300px;
+	width:450px;
+	size:auto;
+/*	border:dotted 1px black;*/
+	position:absolute;
+	top:15em;
+	float:left;
+	z-index:0;
+	margin-left:5em;
+	display:none;
+	overflow:hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+/*slideshow ends */
+
+/*styles for feedback reader*/
+#feedback_title
+{
+	border:solid 1px #FC3;
+	width:inherit;
+	height:20px;
+	margin-left:20px;
+	margin-right:20px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	background-color:#FF9900;
+	font-weight: 700;
+	border-bottom:solid 1px black;
+	display:block;
+	cursor:pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4); 
+}
+#feddback_container
+{
+	/*border:solid 1px red;*/
+	width:auto;
+	height:600px;
+	overflow:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top:0px;
+}
+#data
+{
+	border:solid 1px black; 
+	margin-top:10px; 
+	padding-top:0px; 
+	background-color:#cc3333;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+	width:895px;
+	display:none;
+	position:relative;
+	left:20px;
+	text-align:justify;
+
+}
+
+
+
+
+/*Custom scroll bar*/
+::-webkit-scrollbar{
+	
+	width:10px;
+	
+}
+
+::-webkit-scrollbar-track
+{
+	box-shadow:inset 0 0 10px rgba(0,0,0,0.4); 
+	border-radius:10px;
+	
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color:#cc3333;
+	border-radius:10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+
+
+/* ARTICLE section */
+#recent_post
+{
+	position:relative;
+	top:2em;
+	height:auto;
+	overflow:auto;
+	max-height:450px;
+	border-bottom:solid 1px #cc3333;
+}
+#recent_post table
+{
+	font-family:"Lucida Console", Monaco, monospace;
+	width:600px;
+	height:auto;
+
+}
+#recent_post table th
+{
+	background-color:#FFFFCC;
+	border-bottom:solid 1px black;
+}
+.even
+{
+/*	background-color:#FFC0BF;*/
+	background-color:orange;
+}
+
+#upload_btn
+{
+	border:solid 1px black;
+	position:relative;
+	top:2.2em;
+	margin:auto;
+	width:7.3em;
+	size:auto;
+	border-radius:20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4); 
+	
+}
+#upload_btn a{
+		text-decoration:none;
+		padding-left:5px;
+		padding-right:5px;
+		color:#cc3333;
+		font-weight:bold;
+	
+}
+
+/* Article section ends*/
+
+
+
+/*---------for upload.html--------------*/
+#uploads
+{
+	position:relative;
+	top:1.5em;
+	height:500px;
+	overflow:auto;
+	max-height:500px;
+	border:solid 1px black;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+/*upload ends*/
+
+
+/*-----------------------------------CSS ends-------------------------------*/
+/* Coded by Akash Shende
+*/

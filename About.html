@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="jqry.js" type="text/javascript">
+var flag=false;
+</script>
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+<link href="jqry_ui_css.css"  rel="stylesheet" type="text/css" />
+
+<script src="jqry_ui.js" type="text/javascript">
+</script>
+
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCVsM5Q01pBkLB5f8rxSqzsLz59OifF1Ls&sensor=true_or_false"
+            type="text/javascript"></script>
+
+<title>About Us</title>
+
+<script type="text/javascript">
+$(document).ready(function() {
+         
+		/*time out for feedback form*/
+		setTimeout(function(){ hide_box('feedback_form')},30000);
+		
+         
+		$("#feedback").click(function(e) {
+			$("#feedback_form").slideDown("slow");
+		 });	 
+		 $(".login").click(function(e) {
+            $("#login_box").show("slow");
+			
+			if($("#signup_box").is(":visible"))
+			{
+				$("#signup_box").hide("slow");
+			}
+        });
+		
+		$(".join").click(function(e) {
+			$("#signup_box").show("slow");
+			if($("#login_box").is(":visible"))
+			{
+				$("#login_box").hide("slow");
+			}
+        });
+		 
+
+	
+});
+
+
+function blink(id)
+{
+/*	$("#menu").mouseover(function(e){*/
+		$("#"+id).fadeOut("show");
+		$("#"+id).fadeIn("show");
+		//alert(id);	
+/*	});*/
+}
+
+function date_picker()
+{
+	$("#date_pick").datepicker();
+}
+function hide_box(id)
+{
+	$("#"+id).hide("slow");
+}
+
+function signup_form()
+{
+	$("#signup_box").dialog({Title:"Signup"});
+}
+function data_slide(data)
+{
+	    $("."+data).slideToggle("slow");
+}
+
+function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(18.4708852 ,73.9324321), 13);
+        map.setUIToDefault();
+      }
+    }
+</script>
+
+<style type="text/css">
+@font-face
+{
+	font-family:Orlad_sad;
+	src:url('OratorStd.otf');
+}
+
+#feedback_title
+{
+	width:25em;
+}
+#feedback_title ul
+{
+	margin-left:10px;
+	margin-top:0px;
+}
+#feedback_title li
+{
+	text-decoration:none;
+	list-style:none;
+	float:left;
+	display:inline-block;
+	margin-right:50px;
+	margin-left:0px;
+	display:inline-block;
+	font-family:Orlad_sad;
+}
+#data
+{
+	background-color:transparent;
+	padding:10px 10px 10px 10px;
+	border:none;
+}
+
+.sub_point
+{
+	list-style-position:inside;
+	list-style-type:lower-alpha;
+}
+</style>
+</head>
+
+<body bgcolor="#CCCCCC" onload="initialize()" onunload="GUnload()">
+
+<!--feedback form NOTE: its hidden -->
+<div id="feedback_form">
+<iframe src="feedback.html" scrolling="no" frameborder="0" style="height:220px;width:260px">
+</iframe>
+<label onclick="hide_box('feedback_form')"> X </label>
+</div>
+
+<div id="feedback">
+Feedback</div>
+
+<!-- Main Container -->
+<div class="main" >
+    <!--menu baar -->
+    <div id="menu">
+    <ul><center>
+    <li >&lt;!--</li>
+    <li ><a href="home.html" id="1" onmouseover="blink(this.id)" >Home</a></li>
+    <li ><a href="code_hub.html" id="2" onmouseover="blink(this.id)" >CodeHub</a></li>
+    <li><a href="cesa.html" id="3" onmouseover="blink(this.id)" > CESA</a></li>
+    <li><a href="success.html" id="4" onmouseover="blink(this.id)">Success</a></li>
+    <li><a href="tp.html" id="5" onmouseover="blink(this.id)">Tp</a></li>
+    <li><a href="about.html" id="6" onmouseover="blink(this.id)" class="selected">About</a></li>
+    <li> --&gt;</li>
+    </center>
+    </ul>
+    </div> <!--menu ends-->
+    
+    <div id="feddback_container">
+<br />
+    
+    <div id="feedback_title" onclick="data_slide('data1')">
+	<ul><li><b>Abous Jspm</b></li>
+	</ul>
+	</div>
+
+	 <div id="data"  class="data1">
+&nbsp;&nbsp;&nbsp;&nbsp;Jayawant Shikshan Prasarak Mandal is a charitable educational trust, imparting quality professional education in the field of Engineering, Pharmacy, Management, Computer Application etc. JSPM has established four campuses in Pune at Tathawade, Hadapsar, Wagholi and Bavdhan. Each campus consists of institutes of global competitiveness. All Institutes/Colleges of JSPM are approved by AICTE, recognized by Govt. of Maharashtra and are affiliated to University of Pune.
+<br /><br />
+<b>Mission Statement</b><hr />
+"To provide, nurture and maintain an environment of high academic excellence, research and entrepreneurship for all aspiring students, which will prepare them to face global challenges maintaining high ethical and moral standards."<br />
+
+<br /><b>Vision Statement </b><hr />
+"To satisfy the aspirations of youth force, who want to lead our nation towards prosperity through technoeconomic development."
+<br />
+<br /><b>Founder Secretary’s Message</b><hr />
+	Jayawant Shikshan Prasarak Mandal was established in 1998, with the objective of creating centers of excellence for education in the field of Engineering, Pharmacy, Management and computers etc. We have created a learning culture, a friendly environment that facilitates complete development of our students. Our focus on knowledge, skill and attitude is aimed at meeting the needs of our students. 
+        <center><br />
+<img src="images/sawant.jpg" /></center><br />To achieve this we have handpicked the best faculty from diverse fields and expertise. We have state of the art facilities and infrastructure to supplement the culture and environment of JSPM. Moreover it is our pledge to change in tandem with the changing requirements of the industry and develop and nurture talent that will make the nation proud. I hope you will be among those fortunate students who would get admission to one of our colleges. I am certain that your life at our campus will be academically fruitful. My best wishes to you for success in all your endeavors.
+
+<br /><br />
+
+<b>List of programmes run by JSPM</b>
+<hr />
+
+<b>Hadapsar Campus </b>
+
+<ol>
+       <li><b> U. G. Programmes </b></li>
+             <ol><li class="sub_point">  Jayawantrao Sawant College of Engineering (B.E.) </li>
+             <li class="sub_point">   Jayawantrao Sawant College of Pharmacy & Research (B.Pharm.) </li></ol>
+
+      <li><b> P. G. Programmes </b></li>
+            <ol><li class="sub_point">   Jayawant Institute of Management & Research (MBA) </li>
+             <li class="sub_point">    Abacus Institute of Computer Applications [ a) MBA b) MCA ] </li>
+            <li class="sub_point">   Jayawantrao Sawant College of Engineering [a) MBA b) MCA] </li></ol>
+
+     <li><b>  Diploma Programme  </b></li>
+            <ol><li class="sub_point">   Jayawantrao Sawant Polytechnic </li>
+             <li class="sub_point">   Jayawantrao Sawant Polytechnic (Shift) </li>
+             <li class="sub_point">    Jayawantrao Sawant Institute of Pharmacy (D.Pharm.) </li></ol></li>
+
+      <li><b>  School Programme  </b></li>
+            <ol><li class="sub_point">  Cygnet Public School (Pre-Primary) [SSC Board] </li>
+            <li class="sub_point">    Cygnet Public School (Primary) </li></ol></li>
+
+      <li><b>  Education Programme  </b></li>
+            <ol><li class="sub_point">  Jayawantrao Sawant College of Education (B.Ed.) </li>
+             <li class="sub_point">   Imperial Adhyapak Vidyalaya (D.Ed.) </li></ol></li></ol>
+
+      <ol>
+      <li style="list-style-type:none"><b>Address:</b></li>
+		<ol> <li style="list-style-type:none"><b>S. No. 58, Handewadi Road, Hadapsar, Pune-28</b></li></ol></ol>
+
+       <ol>
+      <li style="list-style-type:none"><b>Contact us:</b></li> 
+       <ol> <li style="list-style-type:none"><b>Tel.: (020) 26970886, 26970887, 26970888 </b></li>
+             <li style="list-style-type:none"><b>Telfax: (020) 26970882 </b></li>
+             <li style="list-style-type:none"><b>Email: jscoe@jspm.edu.in </b></li></ol></ol>
+ </div>
+<br />
+<!--feedback ends---------------------------------->
+
+<div id="feedback_title" onclick="data_slide('data2')">
+	<ul><li><b>About JSCOE</b></li>
+	</ul>
+</div>
+ <div id="data" class="data2" >
+ <center><br /><img src="images/principal.jpg" width="40%" height="40%"/><br />
+ <b>Dr. M.G. Jadhav<br />
+Principal Jscoe, Hadapsar Pune </b></center>
+
+Prof. (Dr.) M.G.Jadhav graduated in Mechanical Engineering(Distinction) in 1979. He completed his M.E. by Research from Shivaji University in Mechanical Engineering in 1992 and Ph.D. in Mechanical Engineering from Shivaji University in 1997.He had worked in Industry for a period of 5 years. He then opted educational field and is serving this noble profession for the last 26 years.
+<p>
+During his academic tenure,he had received Y.P. Powar Prize from Shivaji University in 1977 and Wanson Thermax Prize in 1978. Dr. M.G. Jadhav had been in Technical Teaching field since 1984. He worked as Professor and HOD of Mechanical Engineering at W. I. T. Solapur. There he undertook Energy Park Project under MNRE Govt of India,New Delhi.He was the founder of M. E. (Mech.- Design Engg.) course.His dedication and devotion became fruitful when Mechanical Engineering Dept at W.I.T. got N.B.A. accreditation. He organised URJA 2K7 paper presentation competition at national level. Dr.M.G.Jadhav worked as Principal of P.G.M.C.O.E. Pune. There he was the Organizing Chairman of National Conference sponsored by University of Pune.He also organized Technomeet in 2008 and 2009. </p>
+
+<p>He was Chairman B.O.S Mechanical Engineering, Member of Faculty of Engineeirng, Member R. R. Committee at Shivaji University Kolhapur, and Solapur University, Solapur. He is officiating as Examiner & Paper setter at UG/PG of C.O.E.P., Shivaji University & Solapur University.He works as Resource Person for S.T.T.P., the member of L.I.C. & Staff Selection Committee at various colleges.</p>
+
+<p>Dr. M.G. Jadhav has published 10 research papers in National/International refreed journals and presented 9 papers in National/International Conferences. He is recognised guide for Ph.D. (Mechanical Engineering). He has guided M.E. dessertations and students are undergoing Ph.D. reserch. His contribution in this sphere of education field doesn't halt here.He is always in pursuit of new trends for inculcating new values and added technical learning for the students.</p>
+<br />
+<br />
+<p><b>
+
+Address:<br />
+Jayawantrao Sawant College of Engineering,<br />
+S.No. 58, Indrayani Nagar,<br />
+Handewadi Road,<br />
+Hadapasar, Pune - 411028<br /><br />
+
+Tel: (020) 26970886, 26970887, 26970888<br />
+Fax: 020-26970882 <br />
+Email: jscoe@jspm.edu.in<br />
+
+<div id="map_canvas" style="height:350px; width:380px;">
+</div>
+
+</div>
+<br />
+<!--feedback ends---------------------------------->
+
+
+<div id="feedback_title" onclick="data_slide('data3')"> <!-- insert class of data-->
+	<ul><li><b>About Computer Department</b></li>
+	</ul>
+</div>
+ <div id="data" class="data3" > <!-- NOTE -->
+ 	
+ </div>
+<br />
+
+<!--feedback ends---------------------------------->
+</div> <!-- feddback container ends-->
+
+  
+  
+  <!-- footer-->
+    <div id="footer">
+    <hr /><br />
+    <div class="foot_text">&copy; 2012,Designed and Developed by <a href="http://www.facebook.com/10nary.infection" style="text-decoration:none; color:#cc3322">Akash</a></div>
+     <div id="hits">
+    Total Hits 
+    </div>
+    
+    </div> <!-- footer ends-->
+   
+ </div>
+ 
+ 
+    
+
+
+
+
+</body>
+</html>
